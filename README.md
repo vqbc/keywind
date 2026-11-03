@@ -66,23 +66,20 @@ parent=keywind
 
 ### Theme
 
-When you do need to customize a palette, you can configure your colors under the `colors` key in the `theme` section of Tailwind config file:
+When you do need to customize a palette, you can configure your colors as theme variables in the `@theme` block of the stylesheet:
 
-`tailwind.config.js`
+`src/index.css`
 
-```js
-module.exports = {
-  theme: {
-    extend: {
-      colors: {
-        primary: colors.red,
-      },
-    },
-  },
-};
+```css
+@theme {
+  --color-primary-50: var(--color-red-50);
+  --color-primary-100: var(--color-red-100);
+  /* ... */
+  --color-primary-950: var(--color-red-950);
+}
 ```
 
-Read more about Tailwind CSS configuration in the [documentation](https://tailwindcss.com/docs/configuration).
+Read more about Tailwind CSS theme variables in the [documentation](https://tailwindcss.com/docs/theme).
 
 ### Components
 

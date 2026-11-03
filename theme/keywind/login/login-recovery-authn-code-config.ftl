@@ -21,7 +21,7 @@
           <li>${code[0..3]}-${code[4..7]}-${code[8..]}</li>
         </#list>
       </ul>
-      <div class="flex items-stretch space-x-4 mb-4">
+      <div class="flex items-stretch space-x-4">
         <@button.kw @click="print" color="secondary" size="small" type="button">
           ${msg("recovery-codes-print")}
         </@button.kw>
